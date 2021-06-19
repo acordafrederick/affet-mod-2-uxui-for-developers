@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { GlobalStyle } from "./utils";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <GlobalStyle />
+      <h1>Welcome to UP/Hill</h1>
+      <h2>This is a subheader.</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque
+        accusantium nisi sed qui corporis architecto harum? Quam ad dignissimos
+        mollitia possimus itaque tempore! Aperiam laborum mollitia dolorum dicta
+        et odio!
+      </p>
+    </main>
   );
-}
+};
 
 export default App;
