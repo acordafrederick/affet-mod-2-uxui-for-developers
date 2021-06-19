@@ -5,13 +5,16 @@ const App = () => {
   return (
     <main>
       <GlobalStyle />
-      <Button onClick={() => alert("Triggered by button click!")}>
-        This is a default button
+      <Button>This is a primary button</Button>
+      <br />
+      <br />
+      <Button variant="secondary" size="large" disabled>
+        This is a large secondary button
       </Button>
       <br />
       <br />
-      <Button href="http://google.com">
-        This is a default button with a link
+      <Button variant="tertiary" size="small">
+        This is a small tertiary button
       </Button>
     </main>
   );
