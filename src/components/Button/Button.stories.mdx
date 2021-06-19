@@ -1,5 +1,11 @@
 import { Button } from "./index";
-import { Meta, Story, ArgsTable, Preview } from "@storybook/addon-docs/blocks";
+import {
+  Meta,
+  Story,
+  Canvas,
+  ArgsTable,
+  Preview,
+} from "@storybook/addon-docs/blocks";
 
 ;
 
@@ -68,3 +74,40 @@ The large button can be used for accessibility.
     </div>
   </Story>
 </Preview>
+
+### Playground
+
+Experiment with this story in the Canvas tab.
+
+export const Template = (args) => <Button {...args} />;
+
+<Canvas>
+  <Story
+    name="Playground"
+    args={{
+      variant: "primary",
+      size: "default",
+      children: "Button Text",
+    }}
+    argTypes={{
+      variant: {
+        control: {
+          type: "select",
+          options: ["primary", "secondary", "tertiary"],
+        },
+      },
+      size: {
+        control: {
+          type: "select",
+          options: ["default", "small", "large"],
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Button Component Props
+
+<ArgsTable of={Button} />
