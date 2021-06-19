@@ -1303,6 +1303,16 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/inconsolata@^4.4.5":
+  version "4.4.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/inconsolata/-/inconsolata-4.4.5.tgz#a5e9ffb4830b942474fd11b7134bc8bb811a2a3b"
+  integrity sha512-vBGiG6+RZmL1Xn7SWZT26bqibJjq4Nrkz4bNoD5g9dh+xKv3FOU3PJhLa2N3pf6912UZ6FhdTElryoafKqARUA==
+
+"@fontsource/major-mono-display@^4.4.5":
+  version "4.4.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/major-mono-display/-/major-mono-display-4.4.5.tgz#2e6c3c08fa905743a974be66c571e0975f9034a2"
+  integrity sha512-8bH7gLj9ioIKzRugsRY3pmyemSdo1mwEQ/dDgIJTuxifkm8A/VTqJCXqSv7TDoAOh+WDY46RlsBuw5jTp4wiNg==
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
