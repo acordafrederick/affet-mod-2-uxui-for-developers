@@ -1,6 +1,9 @@
+import { GlobalStyle } from "./utils";
+
 const App = () => {
   return (
     <main>
+      <GlobalStyle />
       <h1>Welcome to UP/Hill</h1>
       <h2>This is a subheader.</h2>
       <p>
