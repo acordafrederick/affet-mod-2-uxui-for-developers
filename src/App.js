@@ -1,17 +1,18 @@
 import { GlobalStyle } from "./utils";
+import { Button } from "./components/Button";
 
 const App = () => {
   return (
     <main>
       <GlobalStyle />
-      <h1>Welcome to UP/Hill</h1>
-      <h2>This is a subheader.</h2>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque
-        accusantium nisi sed qui corporis architecto harum? Quam ad dignissimos
-        mollitia possimus itaque tempore! Aperiam laborum mollitia dolorum dicta
-        et odio!
-      </p>
+      <Button onClick={() => alert("Triggered by button click!")}>
+        This is a default button
+      </Button>
+      <br />
+      <br />
+      <Button href="http://google.com">
+        This is a default button with a link
+      </Button>
     </main>
   );
 };
