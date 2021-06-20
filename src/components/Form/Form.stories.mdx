@@ -1,0 +1,108 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+import { Form, Label, Input, InputGroup, HelperText } from "./index";
+import { Button } from "../Button";
+
+<Meta
+  title="Design System/Form"
+  component={Form}
+  subcomponents={[Label, Input, InputGroup, HelperText]}
+/>
+
+# Form Components
+
+The Form component can be used by importing it into your app with the following code:
+
+`js import { Form, Label, Input, HelperText } from '@<your-npm-username>/up-design';`
+
+## Render a standard form
+
+The following form will be used for users to submit email inquiries and to sign up for blog post notifications.
+
+<Preview withToolbar>
+  <Story name="Default">
+    <Form>
+      <h2>fill out this form.</h2>
+      <InputGroup>
+        <Label htmlFor="firstName">First Name</Label>
+        <Input
+          id="firstName"
+          name="firstName"
+          placeholder="First name"
+          onChange={(e) => console.log(e.target.value)}
+        />
+      </InputGroup>
+      <InputGroup>
+        <Label htmlFor="lastName">Last Name</Label>
+        <Input
+          id="lastName"
+          name="lastName"
+          placeholder="Last name"
+          onChange={(e) => console.log(e.target.value)}
+        />
+      </InputGroup>
+      <InputGroup>
+        <Label htmlFor="email">Email</Label>
+        <Input
+          id="email"
+          name="email"
+          placeholder="Your email"
+          onChange={(e) => console.log(e.target.value)}
+        />
+        <HelperText>Make sure you use a valid email address!</HelperText>
+      </InputGroup>
+      <InputGroup>
+        <Button onClick={() => alert("form submitted!")}>Submit</Button>
+      </InputGroup>
+    </Form>
+  </Story>
+</Preview>
+
+## Render a form with errors
+
+This is how a form will look if a user doesn't enter a valid email address.
+
+<Preview withToolbar>
+  <Story name="Error">
+    <Form>
+      <h2>fill out this form.</h2>
+      <InputGroup>
+        <Label htmlFor="first-name">First Name</Label>
+        <Input
+          id="first-name"
+          name="firstName"
+          placeholder="First name"
+          onChange={(e) => console.log(e.target.value)}
+        />
+      </InputGroup>
+      <InputGroup>
+        <Label htmlFor="last-name">Last Name</Label>
+        <Input
+          id="last-name"
+          name="lastName"
+          placeholder="Last name"
+          onChange={(e) => console.log(e.target.value)}
+        />
+      </InputGroup>
+      <InputGroup>
+        <Label htmlFor="email" error>
+          Email
+        </Label>
+        <Input
+          id="email"
+          name="email"
+          placeholder="Your email"
+          onChange={(e) => console.log(e.target.value)}
+        />
+        {true && (
+          <HelperText error>
+            Make sure you use a valid email address!
+          </HelperText>
+        )}
+      </InputGroup>
+      <InputGroup>
+        <Button onClick={() => alert("form submitted!")}>Submit</Button>
+      </InputGroup>
+    </Form>
+  </Story>
+</Preview>
