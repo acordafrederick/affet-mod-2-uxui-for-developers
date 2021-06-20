@@ -1,6 +1,6 @@
 {
   "name": "@pwedewick/affet-mod-2-uxui-for-developers",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "dependencies": {
     "@fontsource/inconsolata": "^4.4.5",
