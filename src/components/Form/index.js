@@ -73,3 +73,12 @@ HelperText.propTypes = {
 HelperText.defaultProps = {
   error: false,
 };
+
+export const InputGroup = styled.div`
+  padding: 8px;
+  margin: 8px 0;
+`;
+
+export const Form = styled.form`
+  padding: 12px;
+`;
