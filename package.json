@@ -1,7 +1,7 @@
 {
-  "name": "affet-mod-2-uxui-for-developers",
+  "name": "@pwedewick/affet-mod-2-uxui-for-developers",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@fontsource/inconsolata": "^4.4.5",
     "@fontsource/major-mono-display": "^4.4.5",
@@ -61,6 +61,7 @@
     "@storybook/node-logger": "^6.2.9",
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.2.9",
+    "auto": "^10.29.3",
     "cross-env": "^7.0.3",
     "prettier": "^2.3.1"
   },
@@ -76,5 +77,10 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "description": "A component library to support the UP/Hill Design System",
+  "main": "dist/index.js",
+  "repository": "https://github.com/acordafrederick/affet-mod-2-uxui-for-developers",
+  "author": "Frederick Acorda acorda.fred@gmail.com",
+  "license": "MIT"
 }
