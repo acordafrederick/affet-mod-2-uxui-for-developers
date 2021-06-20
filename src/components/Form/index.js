@@ -28,6 +28,17 @@ export const Input = styled.input`
     `};
 `;
 
+export const HelperText = styled.small`
+  font-size: ${typeScale.helperText};
+  margin: 8px 0;
+  color: ${defaultTheme.textFieldLabel};
+  ${(props) =>
+    props.error &&
+    css`
+      color: ${defaultTheme.textFieldErrorLabel};
+    `};
+`;
+
 Label.propTypes = {
   htmlFor: PropTypes.string.isRequired,
   children: PropTypes.string.isRequired,
@@ -52,4 +63,13 @@ Input.propTypes = {
 Input.defaultProps = {
   disabled: false,
   type: "text",
+};
+
+HelperText.propTypes = {
+  children: PropTypes.string.isRequired,
+  error: PropTypes.bool,
+};
+
+HelperText.defaultProps = {
+  error: false,
 };
