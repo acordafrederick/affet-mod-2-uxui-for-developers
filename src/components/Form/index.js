@@ -13,6 +13,21 @@ export const Label = styled.label`
     `};
 `;
 
+export const Input = styled.input`
+  display: block;
+  width: 100%;
+  font-size: ${typeScale.header4};
+  color: ${defaultTheme.textFieldInput};
+  background-color: ${defaultTheme.textFieldBackground};
+  border: none;
+  padding: 12px;
+  ${(props) =>
+    props.error &&
+    css`
+      color: ${defaultTheme.textFieldErrorInput};
+    `};
+`;
+
 Label.propTypes = {
   htmlFor: PropTypes.string.isRequired,
   children: PropTypes.string.isRequired,
@@ -22,4 +37,19 @@ Label.propTypes = {
 Label.defaultProps = {
   htmlFor: "",
   error: false,
+};
+
+Input.propTypes = {
+  id: PropTypes.string,
+  placeholder: PropTypes.string,
+  name: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+  disabled: PropTypes.bool,
+  type: PropTypes.string,
+};
+
+Input.defaultProps = {
+  disabled: false,
+  type: "text",
 };
